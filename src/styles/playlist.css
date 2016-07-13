@@ -1,0 +1,16 @@
+.panel.panel-default .collapsed-content {
+	overflow-y: hidden;
+	transition: height 300ms ease-in-out;
+	cursor:pointer;
+}
+
+.panel.panel-default.collapsed .collapsed-content {
+	height: 0px;
+	cursor:pointer;
+}
+
+.panel-body a { 
+border:1px solid;
+font-style: none;
+	
+ }
