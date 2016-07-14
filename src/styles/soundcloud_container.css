@@ -1,0 +1,31 @@
+
+ .soundcloud-container { 
+	border: 1px solid;
+	width: 700px;
+	height:500px;
+	padding:20px;
+	margin:10px;
+	overflow-wrap: 
+  }
+
+.playlist-buttons-container { 
+		flex-wrap: wrap;
+
+ }
+
+.playlist-buttons { 
+	flex-grow: 1;	
+	min-width: 100px;
+	margin-bottom: 30px;
+
+
+ }
+
+ .playlist-songs { 
+	display: flex;
+
+  }
+
+  .music-title { 
+	flex-direction: column;
+   }
