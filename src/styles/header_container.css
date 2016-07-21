@@ -1,6 +1,38 @@
-.header-container { 
-	border: 2px solid;
-	height: 200px;
-	padding: 40px;
-	margin:10px;
+.header-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	width:100%;
+	background-color:#333333 ;
+	
+	/*background-image: url("../images/header-color.jpg");
+	background-repeat: repeat;*/
  }
+
+.header-inside {
+	width:80%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+ }
+
+.logo { 
+	width:200px;
+	height:77px;
+	padding:10px;
+ }
+	.user-info {
+	margin-top: 20px;
+	font-weight: 700;
+	color:white;
+	 }
+
+
+ #input-bar { 
+	width:500px;
+	height:40px;
+	margin-top:15px;
+	border-radius: 15px;
+
+  }

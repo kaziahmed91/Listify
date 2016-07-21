@@ -1,19 +1,90 @@
-.tab {
+
+.dropbtn {
+    cursor: pointer;
+}
+.dropdown {
+    position: relative;
+    left:-30;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: 20px;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #FFF3E0;
+    padding:20px;
+    overflow-y: scroll;
+    max-height: 300px;
+    min-width: 350px;
+    margin-left: -200px;
+    z-index: 999;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+.dropdown:hover .dropdown-content {
+    display: inline;
+        background-color: ;
+}
+
+.queue-track-container table:hover {
+  background-color:#FFD180 ;
+    border-radius: 10px;
 
 }
 
-.tab-active { 
-	
-	
+
+.nav-buttons { 
+  display:flex;
+  flex-direction: row;
+  position: fixed;
+
+ }
+.nav-buttons .dropdown { 
+  margin-left:20px;
  }
 
- .queue-container  { 
-	border: 1px solid;
-	width: 700px;
-	height:500px;
-	padding:20px;
-	margin:10px;
-	
+.queue-title { 
+}
 
+.queue-track-container { 
+ }
 
-  }
+.queue-track-title { 
+  padding:10px;
+ }
+
+.queue-track-title td:nth-child(1) {
+  width: 15%;
+}
+.queue-track-title td:nth-child(2) {
+  width: 70%;
+}
+.queue-track-title td:nth-child(3) {
+	width: 15%;
+}
+
+.queue-glyphs { 
+  display: flex;
+  flex-direction: row;
+  padding:10px;
+  align-items: center;
+ }
+
+.close-modal { 
+display: inline;
+position: relative;
+}
+.gClose { 
+
+ }
+.gSave { 
+
+ }
+.gTrash { 
+  margin-left:20px;
+}
+ .gPause { 
+
+}
+
