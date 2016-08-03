@@ -1,0 +1,129 @@
+.ui-container { 
+  display:flex;
+  position:relative;
+  flex-direction: row;
+  justify-content: center;
+  overflow: hidden;
+  min-height: 200px;
+  max-height: 800px;
+  padding:20px 20px 150px;
+  background-color: #FFF3E0;
+  background-image: url("https://www.transparenttextures.com/patterns/az-subtle.png");
+ }
+ .likes-container { 
+  background-image: url("https://www.transparenttextures.com/patterns/az-subtle.png");
+  padding:20px;
+  display: flex;
+  flex-direction: row;
+  min-height: 200px;
+  max-height: 700px;
+  padding:20px 20px 150px;
+ }
+
+ .likes-content { 
+  overflow: hidden;
+  overflow-y: scroll;
+
+  }
+/*Playlist Button List*/
+
+.playlists-container {
+  padding:10px;
+  margin-right:20px;
+ }
+
+.tab-title { 
+  font-size:30px;
+ }
+
+.button-container {
+  padding-top: 20px ;
+  border-radius:30px;
+ }
+
+.playlist-button { 
+  text-align: left;
+  width:150px;
+  font-size: 15px;
+  font-weight: 500;
+  text-align: center;
+  background-color: #EF6C00;
+
+}
+
+
+/*Track List*/
+
+.tracks-container {
+  width:90%;
+  height:auto;
+  max-height: 750px;
+  padding:5px;
+  flex-direction:column;
+  overflow: auto;
+  overflow-y: scroll;
+  position:relative;
+  left: 20px;
+ }
+
+.track-row { 
+  border-radius: 10px;
+  margin-bottom:10px;
+  background-color: #FFCC80;
+  height:auto;
+  padding:2px;
+
+  }
+
+.track-row:hover { 
+  background-color:#FFA726;
+  cursor:default;
+  color:white;
+
+ }
+
+table { 
+  table-layout: fixed;
+  width:100%;
+ }
+
+.track-title { 
+  display: flex;
+  width:100%;
+  cursor: pointer;
+  font-weight: 800;
+
+ }
+
+.track-title td:nth-child(1) {
+  width: 10%;
+}
+
+.track-title td:nth-child(2) {
+  width: 70%;
+}
+.track-title td:nth-child(3),
+.track-title td:nth-child(5) {
+  width: 15%;
+} 
+
+
+.playlist-title { 
+  margin-top:30px;
+  font-size: 40px;
+
+ }
+
+#name { 
+}
+
+.add-glyph { 
+  position:relative;
+  margin-left:10%;
+  margin-right:2%;
+ }
+
+.glyph {
+  margin-right: 1%;
+  margin-left: 2%;
+ }

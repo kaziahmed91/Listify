@@ -1,0 +1,70 @@
+.soundcloud-container { 
+	padding:10px;
+	margin:10px;
+  display:flex;
+  justify-content: center;
+  width:70%;
+  top:0;
+  left:0;
+  overflow: auto;
+}
+
+.table-header { 
+}
+  .tabs { 
+  display: flex;
+  flex-direction: column;
+   }
+  .tabs-menu {
+    display: tab;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    
+  }
+
+  .tabs-menu-item {
+
+    float: left;
+    margin-right: 20px;
+    font-size: 250%;
+  }
+
+  .tabs-menu-item a {
+    cursor: pointer;
+    display: block;
+    color: #FF9800;
+  }
+
+  .tabs-menu-item:not(.is-active) a:hover,
+  .tabs-menu-item.is-active a {
+    color: #FFCC80;
+    padding: 5%;
+  }
+
+  .tab-header { 
+    font-size: 200%;
+    
+   }
+  .queue-glyph { 
+    margin-left:25%;
+    cursor: pointer;
+
+   }
+
+  /*Main Containers*/
+
+
+  .playlist-name { 
+    display: flex;
+    justify-content: center;
+   }
+
+.search-results { 
+display:flex;
+flex-direction: column;
+padding:20px;
+width:700px;
+padding-bottom: 20px
+ }
+

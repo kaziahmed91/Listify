@@ -1,0 +1,12 @@
+.search-container { 
+	width:50%;
+	height:50px;
+	margin-left:25%;
+	display:flex;
+	justify-content: center;
+	padding:10px;
+	overflow-y: scroll
+
+ }
+
+ 

@@ -1,0 +1,65 @@
+body, html { 
+	margin:0;
+	padding:0;
+	height:100%;
+	background-color: #FFF3E0;
+ }
+  
+.controller-body {
+	display: flex;
+  flex-direction: row;
+  overflow:hidden;
+  position:inherit;
+  width:100%;
+  margin:10px;
+  justify-content: center;
+
+ }
+
+.false {
+  display: none;
+}
+
+.modal-container { 
+	left:50%;
+	top:50%;
+	width:50%;
+	height:300px;
+	position:absolute;
+  transform: translate(-50%, -50%);
+  text-decoration: none;
+	
+}
+
+.modal-content {
+	align-items: center;
+	padding:10px;
+	display:flex;
+	flex-direction: column;
+	align-content: center;
+	background-color: #F0F4C3;
+	text-decoration: none;
+}
+
+.playlist-name-input { 
+	width:350px;
+	margin-bottom:20px;
+	padding:10px;
+ }
+
+.playlist-submit {
+	margin-left:30%; 
+	margin-right:10px;
+}
+
+.close-modal { 
+	
+ }
+
+
+.playlist-cancel {
+
+}
+
+
+

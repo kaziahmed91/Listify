@@ -35,12 +35,23 @@
     "express-generator": "^4.13.4",
     "fs": "0.0.2",
     "jquery": "^3.1.0",
+    "jquery-ui": "^1.12.0",
+    "material-design-icons": "^2.2.3",
+    "material-ui": "^0.15.2",
+    "materialize-css": "^0.97.6",
+    "muicss": "^0.6.7",
     "react": "^15.1.0",
     "react-dom": "^15.1.0",
     "react-enroute": "0.0.1",
+    "react-fontawesome": "^1.1.0",
+    "react-motion": "^0.4.4",
+    "react-s-alert": "^1.1.4",
+    "react-simpletabs": "^0.7.0",
+    "react-soundcloud-widget": "^2.0.4",
     "react-soundplayer": "^0.3.6",
+    "react-swipeable-views": "^0.6.4",
+    "react-toolbox": "^1.0.2",
     "soundcloud": "^3.1.2",
-    "soundcloud-audio": "^1.0.3",
-    "spotify-web-api-node": "^2.3.1"
+    "soundcloud-audio": "^1.0.3"
   }
 }
