@@ -1,7 +1,7 @@
 # Listify: A soundcloud playlist management platform built on ReactJs. 
 ## Video Introduction:
 $> Click to view Video: 
-[Listify](https://youtu.be/4KJpCl74W40 "Introducing Listify")
+[![Listify](http://img.youtube.com/vi/4KJpCl74W40/0.jpg)](https://youtu.be/4KJpCl74W40" Intro to Listify")
 ## Setup
 $> npm install
 ## Running
