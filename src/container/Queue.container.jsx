@@ -84,6 +84,7 @@ class QueueContainer extends React.Component {
 					<div className="dropdown">
 							{QueueGlyph}
 							<div className="dropdown-content">
+								<h3 id="queue-header">Current Selections</h3>
 								{queueTracks}
 								<div className="queue-glyphs">
 									{saveGlyph}

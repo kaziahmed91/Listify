@@ -3,6 +3,7 @@ body, html {
 	padding:0;
 	height:100%;
 	background-color: #FFF3E0;
+
  }
   
 .controller-body {
@@ -52,14 +53,6 @@ body, html {
 	margin-right:10px;
 }
 
-.close-modal { 
-	
- }
-
-
-.playlist-cancel {
-
-}
 
 
 

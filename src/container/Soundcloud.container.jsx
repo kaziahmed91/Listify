@@ -12,7 +12,6 @@ import SearchContainer from '../container/Search.container.jsx'
 
 import LoadingModal from "../components/LoadingModal.jsx"
 // import UserLikedTracks from "../components/UserLikedTracks.jsx"
-
 import Divider from 'muicss/lib/react/divider';
 import Tab from 'muicss/lib/react/tab';
 import Tabs from 'react-simpletabs';
@@ -26,8 +25,7 @@ class SoundcloudContainer extends React.Component {
 
   _passToQueue(song) {
     this.props._addToQueue(song);
-  }
-
+  }  
   _updateFirstPlaylist($selectedPanel) {
    if ($selectedPanel === 1) {
      this.props._changePlaylist(this.props.playlists[0].name)
@@ -68,7 +66,8 @@ class SoundcloudContainer extends React.Component {
         <Tabs
         onAfterChange={this._updateFirstPlaylist.bind(this)}
         tabActive={1}
-      >
+        >
+
         <Tabs.Panel title="Soundcloud" className="">
           <h3 className="tab-header"> :Selections in {this.props.chosenPlaylist.name}</h3>
             <div className="ui-container">
@@ -79,6 +78,8 @@ class SoundcloudContainer extends React.Component {
               <SoundcloudSongs 
                 chosenPlaylist={this.props.chosenPlaylist}
                 _addToQueue={this._passToQueue.bind(this)}
+                nextToPlay= {this.props.nextToPlay}
+                currentlyPlaying = {this.props.currentlyPlaying}
               />
             </div>
           </div>
@@ -98,23 +99,19 @@ class SoundcloudContainer extends React.Component {
             </div>
           </div>
         </Tabs.Panel>
+
         <Tabs.Panel title='Likes'>
-          
             <div className="likes-container">
               <div className="likes-content">
               <h3 className="playlist-title">User Liked Tunes</h3>
               <UserLikedTracks 
                 userLikedTracks = {this.props.userLikedTracks}
-               _addToQueue={this._passToQueue.bind(this)}
+               _addToQueue = {this._passToQueue.bind(this)}
               />
               </div>
             </div>
-          
-          </Tabs.Panel>
-        </Tabs>
-
-        
-      
+        </Tabs.Panel>
+      </Tabs>
 
   return (
     <div className="soundcloud-container">

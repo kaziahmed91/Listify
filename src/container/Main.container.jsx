@@ -60,9 +60,6 @@ class MainContainer extends React.Component {
 			showSearchMenu: false,
 			displayMessage:false,
 			displayPlayer: true
-
-
-
 		};
 
 		this.client_id = '01fa11d4e4bdb6fe45b244b2d5d6b49a';
@@ -88,7 +85,6 @@ class MainContainer extends React.Component {
 
 	componentDidMount() {
         //initializes the SoundCloud API and allows the user to log in.
-        // debugger;
         SC.initialize( {
             client_id: this.client_id,
             client_secret: this.secret_id,
@@ -205,27 +201,27 @@ class MainContainer extends React.Component {
 
 	_changePlaylist(name) {
 		let PartifyPlaylist = this.state.partifyPlaylists.find((playlist) => { return (name === playlist.name) });
-		let Playlist = this.state.playlists.find( (playlist) => { return (name === playlist.name )});
-
+		let Playlist = this.state.playlists.find((playlist) => { return (name === playlist.name )});
 		let chosenPlaylist = Playlist || PartifyPlaylist;		
-			console.log( "chosenplaylist" ,chosenPlaylist)	
-			this.setState({chosenPlaylist});
+			// console.log( "chosenplaylist" ,chosenPlaylist)	
+		this.setState({chosenPlaylist});
 	}			
 	
 
 	 _changeNumberToString(num) {
-	    let numString = ""
+	    let numString = "";
         if (num < 1000) {
             return num
         } else if (num > 1000000) {
-            numString = String(Math.floor(num / 1000000)) + "M" 
+            numString = String(Math.floor(num / 1000000)) + "M" ;
         } else { 
-        		numString = String(Math.floor(num / 1000)) + "K" 
+        		numString = String(Math.floor(num / 1000)) + "K" ;
         }
-      return numString
+      return numString;
 	}
 
 	_OrderAlphabetically(a,b) {
+    // (a.name < b.name) ? -1 : 
         //a comparative function to help sort playlists alphabetically
      if (a.name < b.name) 
            return -1;
@@ -308,7 +304,7 @@ class MainContainer extends React.Component {
   	let songsearchResults = []
 
   	for (let i = 0; i < playlists.length; i++) {
-  		songsearchResults[i] = []
+  		songsearchResults[i] = [];
   		songsearchResults[i].push(playlists[i].name)
   		playlists[i].songs.forEach((song) => { 
   			if (song.track_title.match(searchterm)) {
@@ -413,54 +409,54 @@ _removeSongFromQueue(index) {
         return (
           <LoadingModal/>
         );
-      } else {
+    } else {
+  		return (
+  			<div>
+  					<HeaderContainer
+  						{...this.state}
+  						_searchPlaylist={this._searchPlaylist}
+  						searchText={this.props.searchText}
+              _changeQueueDisplay={this._changeQueueDisplay}
+              
+  					/>
 
-		return (
-			<div>
-					<HeaderContainer
-						{...this.state}
-						_searchPlaylist={this._searchPlaylist}
-						searchText={this.props.searchText}
-            _changeQueueDisplay={this._changeQueueDisplay}
-            
-					/>
+  				<div className="controller-body">	 
+  					<SoundcloudContainer
+  					  {...this.state}
+              nextToPlay= {this.state.nextToPlay}
+  						_changePlaylist ={this._changePlaylist}
+  						_addToQueue={this._addToQueue}	
+  						userId={this.state.userId}
+  						playlistVisible={this.state.playlistVisible}
+  						isLoading={this.state.isLoading}
+  						_changeActivePlaylist={this._changeActivePlaylist}
+              _clearSearch={this._clearSearch}
+  					/>
 
-				<div className="controller-body">	 
-					<SoundcloudContainer
-					  {...this.state}
-						_changePlaylist ={this._changePlaylist}
-						_addToQueue={this._addToQueue}	
-						userId={this.state.userId}
-						playlistVisible={this.state.playlistVisible}
-						isLoading={this.state.isLoading}
-						_changeActivePlaylist={this._changeActivePlaylist}
-            _clearSearch={this._clearSearch}
-					/>
+  				{this.state.showQueue ? 
+  					<QueueContainer
+              {...this.state}
+  						songQueue={this.state.songQueue}
+  						_addToPlaylist={this._addToPlaylist}
+  						_changeCurrentlyPlaying= {this._changeCurrentlyPlaying}
+  						_clearQueue={this._clearQueue}
+  						_removeSongFromQueue = {this._removeSongFromQueue}
+              _togglePlayer= {this._togglePlayer}
+  					/> : null  }
+  				</div>
 
-				{this.state.showQueue ? 
-					<QueueContainer
-            {...this.state}
-						songQueue={this.state.songQueue}
-						_addToPlaylist={this._addToPlaylist}
-						_changeCurrentlyPlaying= {this._changeCurrentlyPlaying}
-						_clearQueue={this._clearQueue}
-						_removeSongFromQueue = {this._removeSongFromQueue}
-            _togglePlayer= {this._togglePlayer}
-					/> : null  }
-				</div>
-
-			<div className={this.state.displayPlayer}>
-				{this.state.currentlyPlaying && this.state.currentlyPlaying.length > 0 ? 
-					<CustomPlayerContainer
-					{...this.state}
-						currentlyPlaying = {this.state.currentlyPlaying}
-						_playNextSongInQueue = {this._playNextSongInQueue}
-						_clearqueue={this._clearqueue}
-					/> : null}
-				</div>
-			</div>
-		)
-	} 
+  			<div className={this.state.displayPlayer}>
+  				{this.state.currentlyPlaying && this.state.currentlyPlaying.length > 0 ? 
+  					<CustomPlayerContainer
+  					{...this.state}
+  						currentlyPlaying = {this.state.currentlyPlaying}
+  						_playNextSongInQueue = {this._playNextSongInQueue}
+  						_clearqueue={this._clearqueue}
+  					/> : null}
+  				</div>
+  			</div>
+  		)
+	  } 
 	}
 }
 

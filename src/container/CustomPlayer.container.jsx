@@ -11,14 +11,9 @@ class CustomPlayer extends React.Component {
 
     componentDidMount() { 
     }
-    // componentWillReceiveProps() { 
-
-    // }
-
-    
 
     render() {
-          let playbackparams = {auto_play: true }
+          let playbackparams = {auto_play: false }
 
         return (
             <div id="soundcloud-player">

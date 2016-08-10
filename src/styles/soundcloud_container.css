@@ -2,11 +2,11 @@
 	padding:10px;
 	margin:10px;
   display:flex;
+  overflow: hidden;
   justify-content: center;
   width:70%;
   top:0;
   left:0;
-  overflow: auto;
 }
 
 .table-header { 
@@ -58,7 +58,7 @@
   .playlist-name { 
     display: flex;
     justify-content: center;
-   }
+  }
 
 .search-results { 
 display:flex;
@@ -66,5 +66,13 @@ flex-direction: column;
 padding:20px;
 width:700px;
 padding-bottom: 20px
+ }
+.added-to-queue { 
+  background-color: #FFAB91 !important;
+ }
+
+.currently-Playing { 
+  background-color: #E65100
+ !important;
  }
 

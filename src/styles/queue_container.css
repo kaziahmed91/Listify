@@ -5,6 +5,7 @@
 .dropdown {
     position: relative;
     left:-30;
+    padding:10px;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -12,13 +13,15 @@
 }
 .dropdown-content {
     display: none;
+    cursor:pointer;
     position: absolute;
     background-color: #FFF3E0;
     padding:20px;
     overflow-y: scroll;
     max-height: 300px;
     min-width: 350px;
-    margin-left: -200px;
+    max-width: 300px;
+    margin-left: -10px;
     z-index: 999;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
@@ -28,20 +31,23 @@
 }
 
 .queue-track-container table:hover {
-  background-color:#FFD180 ;
+    background-color:#FFA726; ;
     border-radius: 10px;
 
 }
-
+#queue-header { 
+  position:relative;
+ }
 
 .nav-buttons { 
   display:flex;
   flex-direction: row;
-  position: fixed;
-
+  position:fixed;
+  right:50px;
  }
 .nav-buttons .dropdown { 
-  margin-left:20px;
+  margin-left:10px;
+  display: fixed;
  }
 
 .queue-title { 
